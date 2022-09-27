@@ -1,0 +1,47 @@
+* {
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
+}
+/* .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 50px 0;
+} */
+
+h1 {
+  padding-top: 30px;
+}
+.bookmark-creation-section,
+.my-bookmarks {
+  text-align: center;
+  background-color: rgb(233, 233, 233);
+  padding: 40px;
+  border-radius: 10px;
+}
+.my-bookmarks {
+  margin-top: 30px;
+}
+.bookmark-item {
+  background-image: linear-gradient(180deg, rgb(233, 233, 233), white);
+  padding: 20px;
+}
+.danger {
+  border: 1px solid tomato;
+  color: tomato;
+}
+.danger:hover {
+  border: 1px solid tomato;
+
+  background-color: tomato;
+  color: white;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+.error::placeholder {
+  color: red;
+}

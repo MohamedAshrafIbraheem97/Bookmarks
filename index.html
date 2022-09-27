@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Save Your Bookmarks</title>
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <strong>Bookmarker</strong>
+      </h1>
+      <br />
+
+      <div class="row">
+        <section class="bookmark-creation-section">
+          <h4>Bookmark your favorite sites</h4>
+
+          <form>
+            <label for="bookmark-name">Site Name</label>
+            <input
+              type="text"
+              id="bookmark-name"
+              class="u-full-width"
+              placeholder="ex. Facebook"
+            />
+
+            <label for="bookmark-url">Site URL</label>
+            <input
+              type="text"
+              id="bookmark-url"
+              class="u-full-width"
+              placeholder="ex. Facebook.com"
+            />
+            <input type="button" value="Submit" class="button-primary" />
+          </form>
+        </section>
+      </div>
+      <section class="my-bookmarks"></section>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
