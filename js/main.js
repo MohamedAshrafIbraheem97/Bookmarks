@@ -12,13 +12,17 @@ submitBtn.addEventListener("click", createBookmark);
 
 function createBookmark() {
   if (validateBookmarkName() === true && validateBookmarkURL() === true) {
+    if (bookmarkUrl.value.includes("https://") !== true) {
+      console.log("asas");
+      bookmarkUrl.value = "https://" + bookmarkUrl.value;
+    }
+
     let bookmark = {
       BName: bookmarkName.value,
       BUrl: bookmarkUrl.value,
     };
 
     bookmarksList.push(bookmark);
-
     localStorage.setItem("BookmarksList", JSON.stringify(bookmarksList));
 
     retreiveData();
@@ -82,11 +86,11 @@ function validateBookmarkName() {
 }
 
 function validateBookmarkURL() {
-  let regex = /\w{1,}@[a-z]{1,3}.[a-z]{2,3}/;
+  let regex = /\w{1,}.[a-z]{2,3}/;
 
   if (regex.test(bookmarkUrl.value) !== true) {
     bookmarkUrl.classList.add("error");
-    bookmarkUrl.placeholder = "example@example.com";
+    bookmarkUrl.placeholder = "example.com";
     return false;
   } else {
     bookmarkUrl.classList.remove("error");
