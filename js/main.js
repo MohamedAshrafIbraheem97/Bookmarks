@@ -13,7 +13,6 @@ submitBtn.addEventListener("click", createBookmark);
 function createBookmark() {
   if (validateBookmarkName() === true && validateBookmarkURL() === true) {
     if (bookmarkUrl.value.includes("https://") !== true) {
-      console.log("asas");
       bookmarkUrl.value = "https://" + bookmarkUrl.value;
     }
 
