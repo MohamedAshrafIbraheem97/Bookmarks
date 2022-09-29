@@ -32,7 +32,7 @@ function retreiveData() {
   bookmarksList = JSON.parse(localStorage.getItem("BookmarksList"));
   tempBookmark = ``;
 
-  if (bookmarksList.length === 0) {
+  if (bookmarksList.length < 1) {
     myBookmarks.innerHTML = "<p>No bookmarks yet!</p>";
   } else {
     for (let item = 0; item < bookmarksList.length; item++) {
